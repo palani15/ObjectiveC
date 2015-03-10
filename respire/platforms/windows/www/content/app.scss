@@ -1,0 +1,100 @@
+﻿body, h1, h2, h3, h4, h5, h6, p, a{
+	margin: 0 auto;
+	padding: 0px;
+	list-style: none;
+	text-decoration: none;
+	font-family: 'Lato', sans-serif;
+    background: #3498db;
+}
+
+$phone-width: 320px;
+$tablet-width: 768px;
+$desktop-width: 1024px;
+$largescreen-width: 1200px;
+
+@mixin phone {
+  @media (min-width: #{$phone-width}) and (max-width: #{$tablet-width - 1px}) {
+    @content;
+  }
+}
+
+
+@mixin tablet {
+  @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$desktop-width}) and (max-width: #{$largescreen-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin largescreen {
+  @media (min-width: #{$largescreen-width}) {
+    @content;
+  }
+}
+
+/// Mixin to place items on a circle
+/// @author Hugo Giraudel
+/// @author Ana Tudor
+/// @param {Integer} $item-count - Number of items on the circle
+/// @param {Length} $circle-size - Large circle size
+/// @param {Length} $item-size - Single item size
+@mixin on-circle($item-count, $circle-size, $item-size) {  
+  position: relative;
+  width:  $circle-size;
+  height: $circle-size;
+  border-radius: 50%;
+  padding: 0; 
+  list-style: none;
+  
+  > * {
+    display: block;
+    position: absolute;
+    top:  50%; 
+    left: 50%;
+    margin: -($item-size / 2);
+    width:  $item-size;
+    height: $item-size;
+  
+    $angle: (360 / $item-count);
+    $rot: 0;
+
+    @for $i from 1 through $item-count {
+      &:nth-of-type(#{$i}) {
+        -webkit-transform: rotate($rot * 1deg) translate($circle-size / 2) rotate($rot * -1deg);
+        transform: rotate($rot * 1deg) translate($circle-size / 2) rotate($rot * -1deg);
+      }
+
+      $rot: $rot + $angle;
+    }
+  }
+}
+
+.circle-container {
+    @include phone {
+        @include on-circle($item-count: 4, $circle-size: 20em, $item-size: 4em);  
+    }
+    @include tablet {
+        @include on-circle($item-count: 6, $circle-size: 30em, $item-size: 6em);  
+    }
+    @include desktop {
+        @include on-circle($item-count: 8, $circle-size: 40em, $item-size: 8em);  
+    }
+    @include largescreen {
+        @include on-circle($item-count: 10, $circle-size: 50em, $item-size: 10em);  
+    }
+  margin: 5em auto 0;
+  border: solid 5px tomato;
+
+  img { 
+    display: block; 
+    max-width: 100%; 
+    border-radius: 50%;
+    transition: .15s;
+    box-shadow: 0 0 0 5px tomato, 0 0 0 4px #999;     
+  }
+}
