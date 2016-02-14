@@ -29,5 +29,10 @@
     [textField setStringValue:@"Random Number Generator seeded"];
 }
 
+- (void)awakeFromNib {
+    NSDate *now;
+    now = [NSDate date];
+    [textField setObjectValue:(now)];
+}
 
 @end
