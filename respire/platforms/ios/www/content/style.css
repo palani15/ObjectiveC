@@ -1,0 +1,271 @@
+body, h1, h2, h3, h4, h5, h6, p, a{
+	margin: 0 auto;
+	padding: 0px;
+	list-style: none;
+	text-decoration: none;
+	font-family: 'Lato', sans-serif;
+    background: #3498db;
+}
+
+/*=================
+	default css
+==================*/
+.wrapper{
+	width: 100%;
+	height:100%;
+	background: #3498db;
+	position:fixed;
+	top:0;
+	left:0;
+}
+
+.holder{
+	width: 1000px;
+	margin: auto;
+	position: relative;
+	overflow: hidden;
+}
+
+/*=================
+	main css
+==================*/
+.main{
+	width: 100%;
+	height: 100%;
+}
+
+.login{
+	width: 500px;
+	height: 300px;
+	margin: auto;
+	margin-top: 200px;
+}
+
+.login h1{
+	font-family: 'Lato', sans-serif;
+	font-weight: 400;
+	font-size: 20px;
+	color: white;
+	text-align: center;
+	padding-top: 20px;
+	padding-bottom: 10px;
+}
+
+.pin{
+	width: 220px;
+	padding:10px;
+	margin: auto;
+}
+	
+.pin input{
+	width: 40px;
+	height: 50px;
+	border: none;
+	border-radius: 4px;
+	margin: 5px;
+	/*shadow*/
+	-webkit-box-shadow: 0px 2px 3px -2px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 2px 3px -2px rgba(0,0,0,0.75);
+	box-shadow: 0px 2px 3px -2px rgba(0,0,0,0.75);
+}
+input[placeholder]{
+	text-align: center;
+}
+
+.login-btn{
+	width: 120px;
+	height: 40px;
+	background: #2980b9;
+	margin: auto;
+	margin-top: 10px;
+	text-align: center;
+	line-height: 35px;
+	cursor: pointer;
+	/*radus*/
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	/*shadow*/
+	-webkit-box-shadow: 0px 2px 3px -2px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 2px 3px -2px rgba(0,0,0,0.75);
+	box-shadow: 0px 2px 3px -2px rgba(0,0,0,0.75);
+}
+.login-btn a{
+	text-decoration: none;
+	color: white;
+}
+
+.login-btn:hover{
+	background: #1f74a3;
+}
+
+.login h2{
+	font-family: 'Lato', sans-serif;
+	font-weight: 400;
+	font-size: 14px;
+	color: white;
+	text-align: center;
+	margin-top: 10px;
+}
+/* profile style*/
+.profile_holder{
+	width:100%;
+	padding:20px 0;
+	margin:2% auto;
+}
+.profile_container{
+	width:500px;
+	height:500px;
+	background-color:#e67e22;
+	margin:auto;
+	border-radius:100%;
+}
+.friends_holder{
+	width:100%;
+	margin:auto;
+	padding:10px 0;
+}
+.profile{
+	width:200px;
+	height:200px;
+	border:5px solid #f2f2f2;
+	border-radius:100%;
+	background-color:#333;
+	position:relative;
+	top:-385px;
+	left:150px;
+}
+.profile img{
+	width:200px;
+	height:200px;
+	border-radius:100%;
+}
+.friend{
+	width:80px;
+	height:80px;
+	background-color:#333;
+	border-radius:100%;
+	border:3px solid #f2f2f2;
+}
+.friend img{
+	width:80px;
+	height:80px;
+	border-radius:100%;
+}
+.friend_one{
+	position:relative;
+	top:0;
+	left:210px;
+}
+.friend_two{
+	position:relative;
+	top:25px;
+	left:380px;
+}
+.friend_three{
+	position:relative;
+	top:135px;
+	left:370px;
+}
+.friend_four{
+	position:relative;
+	top:-145px;
+	left:40px;
+}
+.friend_five{
+	position:relative;
+	top:-35px;
+	left:45px;
+}
+.friend_six{
+	position:relative;
+	top:-40px;
+	left:210px;
+}
+.profile_count{
+	padding:10px;
+	position:relative;
+	top:-60px;
+	left:60px;
+}
+.profile_count span{
+	padding:20px 18px;
+	color:#fff;
+	font-size:15px;
+	font-weight:bold;
+	background-color:rgba(0,0,0,0.8);
+	border-radius:100%;
+}
+.add{
+	width:40px;
+	padding:5px 10px;
+	margin:auto;
+	text-align:center;
+	background-color:#f2f2f2;
+	font-size:20px;
+	font-weight:bold;
+	border-radius:30px;
+	cursor:pointer;
+	
+	-webkit-box-shadow: 0px 2px 3px -2px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 2px 3px -2px rgba(0,0,0,0.75);
+	box-shadow: 0px 2px 3px -2px rgba(0,0,0,0.75);
+}
+/*profile ends */
+
+/*mobile*/
+@media only screen and (min-width: 320px) and (max-width: 479px){
+	.main{width: 100%; height: 500px;}
+	.holder{width: 98%;margin: auto; position: relative;	overflow: hidden;}
+	.login{ width: 90%; margin: auto; margin-top: 150px;}
+	.profile_holder{width: 100%; margin: auto;}
+	.profile_container{ width: 300px; height: 300px; border-radius: 100%;}
+	.friends_holder{ width: 100%;}
+
+	.profile_holder{margin-top: 30px;}
+	.profile{width: 130px; height: 130px; position: relative; top: -325px; left: 80px;}
+	.profile img{width: 130px; height: 130px; border-radius: 100%;}
+	.friend{ width: 60px; height: 60px; border-radius: 100%; border:3px solid #f2f2f2;}
+	.friend img{ width: 60px; height: 60px; border-radius: 100%;}
+	.friend_one{position: relative; top: 0px; left: 120px;}
+	.friend_two{position: relative; top: -15px; left: 210px;}
+	.friend_three{position: relative; top: 20px; left: 215px;}
+	.friend_four{position: relative; top: 18px; left: 120px;}
+	.friend_five{position: relative; top: -110px; left: 20px;}
+	.friend_six{position: relative; top: -275px; left: 22px;}
+	.profile_count{position: relative; top: -46px; left: 40px;}
+	.profile_count span{ padding: 10px 8px; font-size: 12px;}
+	.add{margin-top: 10px;}
+}
+
+add{
+	width:40px;
+	padding:5px 10px;
+	margin:auto;
+	text-align:center;
+	background-color:#f2f2f2;
+	font-size:20px;
+	font-weight:bold;
+	border-radius:30px;
+	cursor:pointer;
+	
+	-webkit-box-shadow: 0px 2px 3px -2px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 2px 3px -2px rgba(0,0,0,0.75);
+	box-shadow: 0px 2px 3px -2px rgba(0,0,0,0.75);
+}
+
+/*mobile landscape*/
+/*@media only screen and (min-width: 480px) and (max-width: 767px){
+	.main{width: 100%; height: 100%;}
+	.holder{width: 98%;margin: auto; position: relative;	overflow: hidden;}
+	.login{ width: 90%; margin: auto; margin-top: 150px;}
+
+}*/
+
+/*Tablet*/
+/*@media only screen and (min-width: 768px) and (max-width: 959px){
+	.main{width: 100%; height: 100%;}
+	.holder{width: 98%;margin: auto;position: relative;	overflow: hidden;}
+	.login{ width: 90%; margin: auto; margin-top: 200px;}
+
+}*/
